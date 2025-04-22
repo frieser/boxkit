@@ -1,1 +1,23 @@
-helix
+neovim nvim
+zsh
+wl-clipboard wl-copy
+ripgrep-all rg
+fd fd
+zoxide zoxide
+jq jq
+yq yq
+starship starship
+chezmoi chezmoi
+just 
+fzf fzf
+yazi yazi
+tldr tldr
+ydotool
+nushell nu
+zellij zellij
+7zip
+eza eza
+direnv direnv
+lazygit lazygit
+gitleaks gitleaks
+go
