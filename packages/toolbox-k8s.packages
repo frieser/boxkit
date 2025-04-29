@@ -1,0 +1,16 @@
+fluxcd
+kubectl
+kubectx
+helm
+kind
+argocd
+jq
+yq
+k9s
+stern
+popeye
+kubetail
+kubens
+fzf
+gitleaks
+zsh

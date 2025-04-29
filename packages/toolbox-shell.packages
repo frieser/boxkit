@@ -1,7 +1,3 @@
-neovim nvim
-zsh
-wl-clipboard 
-fd 
 zoxide 
 jq 
 yq
@@ -11,3 +7,20 @@ tldr tldr
 ydotool
 direnv direnv
 gitleaks gitleaks
+make
+zoxide
+starship
+chezmoi
+yazi
+tldr
+git-delta
+nushell
+zellij
+7zip
+eza
+direnv
+lazygit
+bat
+ripgrep
+atuin
+zsh

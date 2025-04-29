@@ -6,10 +6,10 @@ LABEL com.github.containers.toolbox="true" \
       maintainer="faeizmahrus@outlook.com"
 
 # Copy the setup scripts and package list
-COPY ../scripts/toolbox-shell.sh /
+COPY ../scripts/toolbox-ide.sh /
 COPY ../scripts/distrobox-shims.sh /
-COPY ../packages/toolbox-shell.packages /
+COPY ../packages/toolbox-ide.packages /
 
 # Run the setup scripts
-RUN chmod +x toolbox-shell.sh distrobox-shims.sh && /toolbox-shell.sh
-RUN rm /toolbox-shell.sh /distrobox-shims.sh /toolbox-shell.packages
+RUN chmod +x toolbox-ide.sh distrobox-shims.sh && /toolbox-ide.sh
+RUN rm /toolbox-ide.sh /distrobox-shims.sh /toolbox-ide.packages
