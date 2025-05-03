@@ -35,6 +35,7 @@ jobs:
           - toolbox-keyboard
           - toolbox-ide
           - toolbox-apps
+          - toolbox-k8s
     steps:
       # Clone code to runner
       - name: Checkout
