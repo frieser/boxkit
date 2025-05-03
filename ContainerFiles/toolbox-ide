@@ -19,6 +19,8 @@ autorefresh=1\n\
 gpgcheck=1\n\
 gpgkey=https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/yum/RPM-GPG-KEY-windsurf" \
 > /etc/yum.repos.d/windsurf.repo
+
+
 # add cursor repo
 RUN  dnf copr enable matthaigh27/cursor -y
 

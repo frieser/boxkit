@@ -10,6 +10,9 @@ COPY ../scripts/toolbox-keyboard.sh /
 COPY ../scripts/distrobox-shims.sh /
 COPY ../packages/toolbox-keyboard.packages /
 
+# add keyd repo
+RUN dnf copr enable alternateved/keyd -y
+
 # Run the setup scripts
 RUN chmod +x toolbox-keyboard.sh distrobox-shims.sh && /toolbox-keyboard.sh
 RUN rm /toolbox-keyboard.sh /distrobox-shims.sh /toolbox-keyboard.packages
