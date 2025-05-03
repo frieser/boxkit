@@ -14,9 +14,10 @@ chezmoi
 yazi
 tldr
 git-delta
-nushell
+nu
 zellij
-7zip
+p7zip
+p7zip-plugins
 eza
 direnv
 lazygit

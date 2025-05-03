@@ -10,6 +10,12 @@ COPY ../scripts/toolbox-shell.sh /
 COPY ../scripts/distrobox-shims.sh /
 COPY ../packages/toolbox-shell.packages /
 
+# add cli tools repo
+RUN dnf copr enable shdwchn10/AllTheTools  -y
+RUN dnf copr enable lihaohong/yazi -y
+RUN dnf copr enable clarlok/tools -y
+RUN dnf copr enable atim/lazygit -y
+
 # Run the setup scripts
 RUN chmod +x toolbox-shell.sh distrobox-shims.sh && /toolbox-shell.sh
 RUN rm /toolbox-shell.sh /distrobox-shims.sh /toolbox-shell.packages
