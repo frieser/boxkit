@@ -10,9 +10,11 @@ COPY ../scripts/toolbox-apps.sh /
 COPY ../scripts/distrobox-shims.sh /
 COPY ../packages/toolbox-apps.packages /
 
+
+# add ghostty copr repo
+RUN dnf copr enable pgdev/ghostty -y
+
 # Run the setup scripts
 RUN chmod +x toolbox-apps.sh distrobox-shims.sh && /toolbox-apps.sh
 RUN rm /toolbox-apps.sh /distrobox-shims.sh /toolbox-apps.packages
 
-# install ghostty
-RUN dnf copr enable pgdev/ghostty -y && dnf install ghostty -y

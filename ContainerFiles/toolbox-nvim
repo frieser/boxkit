@@ -13,3 +13,6 @@ COPY ../packages/toolbox-nvim.packages /
 # Run the setup scripts
 RUN chmod +x toolbox-nvim.sh distrobox-shims.sh && /toolbox-nvim.sh
 RUN rm /toolbox-nvim.sh /distrobox-shims.sh /toolbox-nvim.packages
+
+# install markdownlint-cli
+RUN npm install -g markdownlint-cli

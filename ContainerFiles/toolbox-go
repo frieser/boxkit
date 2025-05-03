@@ -15,6 +15,6 @@ RUN chmod +x toolbox-go.sh distrobox-shims.sh && /toolbox-go.sh
 RUN rm /toolbox-go.sh /distrobox-shims.sh /toolbox-go.packages
 
 # install bazelisk
-    RUN curl -LO "https://github.com/bazelbuild/bazelisk/releases/download/v1.26.0/bazelisk-linux-amd64" && \
-        mv bazelisk-linux-amd64 /usr/local/bin/bazel && \
-        chmod +x /usr/local/bin/bazel
+RUN curl -LO "https://github.com/bazelbuild/bazelisk/releases/download/v1.26.0/bazelisk-linux-amd64" && \
+    mv bazelisk-linux-amd64 /usr/local/bin/bazel && \
+    chmod +x /usr/local/bin/bazel

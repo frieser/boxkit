@@ -5,4 +5,4 @@
 
 # Update the container and install packages
 dnf update -y
-grep -v '^#' ./toolbox-k8s.packages | xargs dnf install -y --skip-unavailable
+grep -v '^#' ./toolbox-k8s.packages | xargs dnf install -y 
