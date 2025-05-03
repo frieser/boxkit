@@ -10,6 +10,18 @@ COPY ../scripts/toolbox-ide.sh /
 COPY ../scripts/distrobox-shims.sh /
 COPY ../packages/toolbox-ide.packages /
 
+# add windsurf repo
+RUN echo -e "[windsurf]\n\
+name=Windsurf Repository\n\
+baseurl=https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/yum/repo/\n\
+enabled=1\n\
+autorefresh=1\n\
+gpgcheck=1\n\
+gpgkey=https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/yum/RPM-GPG-KEY-windsurf" \
+> /etc/yum.repos.d/windsurf.repo
+# add cursor repo
+RUN  dnf copr enable matthaigh27/cursor -y
+
 # Run the setup scripts
 RUN chmod +x toolbox-ide.sh distrobox-shims.sh && /toolbox-ide.sh
 RUN rm /toolbox-ide.sh /distrobox-shims.sh /toolbox-ide.packages
