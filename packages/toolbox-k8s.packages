@@ -1,4 +1,4 @@
-fluxcd
+flux
 kubectl
 kubectx
 helm
@@ -7,10 +7,12 @@ argocd
 jq
 yq
 k9s
-stern
 popeye
-kubetail
 kubens
 fzf
 gitleaks
+kustomize
+terraform
+minikube
+kubeseal
 zsh
