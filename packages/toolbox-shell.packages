@@ -1,12 +1,9 @@
-zoxide 
 jq 
 yq
 just 
 fzf 
-tldr tldr
 ydotool
-direnv direnv
-gitleaks gitleaks
+gitleaks 
 make
 zoxide
 starship
