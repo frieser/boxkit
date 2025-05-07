@@ -26,6 +26,7 @@ ripgrep
 fd
 npm
 rustup
+cargo
 just 
 ydotool
 gitleaks 
