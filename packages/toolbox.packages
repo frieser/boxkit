@@ -1,6 +1,7 @@
 zsh
 go
 make
+java-21-openjdk-devel
 flux
 kubectl
 kubectx
