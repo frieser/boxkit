@@ -10,36 +10,20 @@ COPY ../scripts/toolbox.sh /
 COPY ../scripts/distrobox-shims.sh /
 COPY ../packages/toolbox.packages /
 
-
-# add windsurf repo
-RUN echo -e "[windsurf]\n\
-name=Windsurf Repository\n\
-baseurl=https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/yum/repo/\n\
-enabled=1\n\
-autorefresh=1\n\
-gpgcheck=1\n\
-gpgkey=https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/yum/RPM-GPG-KEY-windsurf" \
-> /etc/yum.repos.d/windsurf.repo
-
 # add cursor repo
 RUN  dnf copr enable matthaigh27/cursor -y
-
 
 # add utils repo
 RUN dnf copr enable -y magnusrc/k9s
 RUN dnf copr enable -y merded/kubectx 
-RUN dnf copr enable -y enmanuelmoreira/mapanare-labs 
+RUN dnf copr enable -y fitipol/toolbox
 RUN dnf copr enable -y johan/fedora-rpms 
 
 # add keyd repo
 RUN dnf copr enable alternateved/keyd -y
 
-
 # add cli tools repo
 RUN dnf copr enable shdwchn10/AllTheTools  -y
-RUN dnf copr enable lihaohong/yazi -y
-RUN dnf copr enable clarlok/tools -y
-RUN dnf copr enable atim/lazygit -y
 
 # Run the setup scripts
 RUN chmod +x toolbox.sh distrobox-shims.sh && /toolbox.sh
