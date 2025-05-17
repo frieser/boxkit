@@ -14,25 +14,11 @@ COPY ../packages/toolbox.packages /
 RUN  dnf copr enable matthaigh27/cursor -y
 
 # add utils repo
-RUN dnf copr enable -y magnusrc/k9s
-RUN dnf copr enable -y merded/kubectx 
 RUN dnf copr enable -y fitipol/toolbox
-RUN dnf copr enable -y johan/fedora-rpms 
-
-# add keyd repo
-RUN dnf copr enable alternateved/keyd -y
-
-# add cli tools repo
-RUN dnf copr enable shdwchn10/AllTheTools  -y
 
 # Run the setup scripts
 RUN chmod +x toolbox.sh distrobox-shims.sh && /toolbox.sh
 RUN rm /toolbox.sh /distrobox-shims.sh /toolbox.packages
-
-# install bazelisk
-RUN curl -LO "https://github.com/bazelbuild/bazelisk/releases/download/v1.26.0/bazelisk-linux-amd64" && \
-    mv bazelisk-linux-amd64 /usr/local/bin/bazel && \
-    chmod +x /usr/local/bin/bazel
 
 # install kubetail
 RUN curl -sS https://www.kubetail.com/install.sh | bash
