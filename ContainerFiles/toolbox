@@ -11,7 +11,7 @@ COPY ../scripts/distrobox-shims.sh /
 COPY ../packages/toolbox.packages /
 
 # add cursor repo
-RUN  dnf copr enable matthaigh27/cursor -y
+RUN  dnf copr enable waaiez/cursor -y
 
 # add utils repo
 RUN dnf copr enable -y fitipol/toolbox
