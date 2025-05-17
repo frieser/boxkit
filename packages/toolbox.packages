@@ -12,7 +12,6 @@ jq
 yq
 k9s
 popeye
-kubens
 fzf
 gitleaks
 kustomize
