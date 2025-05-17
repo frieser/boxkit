@@ -16,7 +16,6 @@ fzf
 gitleaks
 kustomize
 terraform
-minikube
 kubeseal
 keyd
 sox
