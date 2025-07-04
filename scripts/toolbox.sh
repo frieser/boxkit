@@ -3,6 +3,5 @@
 # Symlink distrobox shims
 ./distrobox-shims.sh
 
-# Update the container and install packages
-dnf update -y
-grep -v '^#' ./toolbox.packages | xargs dnf install -y 
+distrobox enter toolbox-testing -- bash -c "git clone https://aur.archlinux.org/yay.git ~/.local/share/yay && cd ~/.local/share/yay && makepkg --noconfirm -si"
+grep -v '^#' ./toolbox.packages | xargs yay -S --noconfirm --needed
