@@ -12,4 +12,4 @@ COPY ../packages/toolbox.packages /
 
 # Run the setup scripts
 RUN chmod +x toolbox.sh distrobox-shims.sh && /toolbox.sh
-RUN rm /toolbox.sh /distrobox-shims.sh /toolbox.packages
+RUN rm /toolbox.sh /distrobox-shims.sh
