@@ -1,27 +1,15 @@
-FROM quay.io/fedora/fedora-toolbox:42
+FROM ghcr.io/ublue-os/arch-toolbox-amdgpupro
 
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox or distrobox command" \
       summary="An example ContainerFile to demonstrate multiple image builds." \
-      maintainer="faeizmahrus@outlook.com"
+      maintainer="frieserpaldi@gmail.com"
 
 # Copy the setup scripts and package list
 COPY ../scripts/toolbox.sh /
 COPY ../scripts/distrobox-shims.sh /
 COPY ../packages/toolbox.packages /
 
-# add cursor repo
-RUN  dnf copr enable waaiez/cursor -y
-
-# add utils repo
-RUN dnf copr enable -y fitipol/toolbox
-
 # Run the setup scripts
 RUN chmod +x toolbox.sh distrobox-shims.sh && /toolbox.sh
 RUN rm /toolbox.sh /distrobox-shims.sh /toolbox.packages
-
-# install kubetail
-RUN curl -sS https://www.kubetail.com/install.sh | bash
-
-# install markdownlint-cli
-RUN npm install -g markdownlint-cli
